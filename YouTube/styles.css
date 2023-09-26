@@ -1,0 +1,115 @@
+body {
+  margin: 0px;
+}
+.top-bar {
+  display: flex;
+  background-color: black;
+  height: fit-content;
+  margin-bottom: 0%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  border-bottom: 1px solid grey;
+}
+.search-bar {
+  background-color: black;
+  height: 30px;
+  width: 1fr;
+  border-radius: 19px;
+  border: 1px solid grey;
+  color: white;
+  margin: 5px;
+  padding: 2px;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar-left {
+  display: flex;
+  background-color: black;
+  height: fit-content;
+  position: relative;
+  justify-content: center;
+}
+.top-bar-button {
+  margin: 5px;
+  color: white;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.topic-bar {
+  background-color: black;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  border-bottom: 1px solid white;
+  padding-left: 5px;
+  display: flex;
+  justify-content: start;
+}
+.topic-bar-button {
+  border-radius: 7px;
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 128);
+  color: white;
+  font-family: "Poppins";
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition-duration: 500ms;
+}
+.topic-bar-button:focus {
+  background-color: white;
+  color: black;
+}
+.topic-bar-button:hover {
+  opacity: 50%;
+  transition-duration: 500ms;
+}
+.search-type-area {
+  width: 70%;
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: 2px;
+  border-radius: 15px;
+}
+.search-button {
+  background-color: transparent;
+  top: 4px;
+  border: none;
+  height: max-content;
+  width: max-content;
+  border-left: 1px solid white;
+}
+.side-bar {
+  margin-top: 0%;
+  height: 700px;
+  width: 190px;
+  position: relative;
+  top: 0;
+  left: -100%;
+  background: rgba(7, 7, 7, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: left 0.5s ease-in-out;
+}
+.search-type-area:focus {
+  outline: none;
+}
+.unCollapse {
+  left: 0px;
+}
+.workspace {
+  background-color: black;
+  margin: 0px;
+}

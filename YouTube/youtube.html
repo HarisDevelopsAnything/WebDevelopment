@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <script src="backend.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <button class="top-bar-button" onclick="menuOpen()">Menu</button>
+        <button class="top-bar-button">YouTube</button>
+      </div>
+      <div class="search-bar">
+        <input class="search-type-area" placeholder="Search for anything" />
+        <button class="search-button">🔍</button>
+      </div>
+      <div>
+        <button class="top-bar-button">Sign in</button>
+        <button class="top-bar-button">Account settings</button>
+      </div>
+    </div>
+    <div class="workspace">
+      <div class="stack">
+        <div class="topic-bar">
+          <button class="topic-bar-button">Help</button>
+          <button class="topic-bar-button">Trending</button>
+          <button class="topic-bar-button">PC building</button>
+        </div>
+        <div id="sidebar" class="side-bar"></div>
+      </div>
+    </div>
+  </body>
+</html>
