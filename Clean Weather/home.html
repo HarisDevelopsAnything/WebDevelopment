@@ -14,9 +14,9 @@
     <script src="weather.js"></script>
     <title>Document</title>
   </head>
-  <body class="container" onmouseover="weatherHeading()">
+  <body class="container">
     <h1 id="headingText" class="blinking-caret">Weather info that's</h1>
-    <div>
+    <div class="search-bar">
       <input
         class="gmorph-input"
         type="text"
@@ -24,11 +24,12 @@
         placeholder="Enter the city"
         onemptied="()=>{document.getElementById('weather-table').classList.remove('unhide')};"
       />
-      <button class="gmorph-button" onclick="getWeatherInfo()">
-        Get Weather
+      <button class="image-button" onclick="getWeatherInfo()">
+        Search
+        <img src="icons/search-mesh.png" width="35" height="35" >
       </button>
     </div>
-    <div class="weather-card">
+    <div class="title-card">
       <h2 id="city-card" class="headingText">Place</h2>
     </div>
     <div class="weather-table" id="weather-table">

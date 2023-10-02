@@ -30,11 +30,10 @@ const getWeatherInfo = () => {
       const statecode = data.location.region;
       const countrycode = data.location.country;
       cityCard.innerHTML = `${location}, ${statecode}, ${countrycode}`;
-      tempCard.innerHTML = `${temperature}°C/${data.current.temp_f}°F`;
+      tempCard.innerHTML = `${temperature}°C\n${data.current.temp_f}°F`;
       weatherCard.innerHTML = condition;
       humidCard.innerHTML = `${humidity}%`;
       let recOutfit = "";
-      alert(typeof temperature);
       if (parseInt(temperature) <= 0) {
         recOutfit = "Heavy sweaters";
         outfitCard.innerHTML = recOutfit;
@@ -64,39 +63,8 @@ const getWeatherInfo = () => {
       console.error("There was a problem fetching weather data:", error);
     });
 };
-const getSevenDay = () => {
-  const apiKey = "854b369436fc4ea5a1a131144232407";
-  const city = document.getElementById("cityInput").value; // Replace with the desired city
-  const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7`;
-
-  fetch(apiUrl)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // Access the 7-day forecast data
-      const forecast = data.forecast.forecastday;
-
-      // Loop through the forecast data and display each day's weather
-      forecast.forEach((dayData, index) => {
-        const date = dayData.date;
-        const condition = dayData.day.condition.text;
-        const highTemperature = dayData.day.maxtemp_c;
-        const lowTemperature = dayData.day.mintemp_c;
-
-        console.log(`Day ${index + 1}: ${date}`);
-        console.log(`Condition: ${condition}`);
-        console.log(`High Temperature: ${highTemperature}°C`);
-        console.log(`Low Temperature: ${lowTemperature}°C`);
-        console.log("--------------------------");
-      });
-    })
-    .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error);
-    });
+window.onload = () => weatherHeading();
+    
   async function weatherHeading() {
     defaultLength = document.getElementById("headingText").innerHTML.length;
     const phrases = [
@@ -113,7 +81,7 @@ const getSevenDay = () => {
       " understandable",
       " from weatherapi.com",
     ];
-    phrase = 0;
+    let phrase = 0;
     while (true) {
       await typeWriter(phrases[phrase]);
       await deTypeWriter(defaultLength);
@@ -136,4 +104,4 @@ const getSevenDay = () => {
       await new Promise((resolve) => setTimeout(resolve, 50));
     }
   }
-};
+
